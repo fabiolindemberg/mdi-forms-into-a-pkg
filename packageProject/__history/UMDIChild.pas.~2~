@@ -1,0 +1,24 @@
+﻿unit UMDIChild;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TMDIChild = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MDIChild: TMDIChild;
+
+implementation
+
+{$R *.dfm}
+
+end.

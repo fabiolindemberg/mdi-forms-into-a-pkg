@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/10/11 17:32:27.352.dproj,D:\Users\fabio.lindemberg.WPD\Documents\RAD Studio\Projects\Package1.dproj=D:\Users\fabio.lindemberg.WPD\Documents\RAD Studio\Projects\mdi-forms-into-a-pkg\packageProject\MdiFormsPkg.dproj</Transaction>
+    <Transaction>2018/10/11 17:47:09.852.pas,D:\Users\fabio.lindemberg.WPD\Documents\RAD Studio\Projects\mdi-forms-into-a-pkg\packageProject\Unit1.pas=D:\Users\fabio.lindemberg.WPD\Documents\RAD Studio\Projects\mdi-forms-into-a-pkg\src\packageMain.pas</Transaction>
+    <Transaction>2018/10/11 17:48:44.968.pas,D:\Users\fabio.lindemberg.WPD\Documents\RAD Studio\Projects\mdi-forms-into-a-pkg\packageProject\Unit1.pas=D:\Users\fabio.lindemberg.WPD\Documents\RAD Studio\Projects\mdi-forms-into-a-pkg\packageProject\UMDIChild.pas</Transaction>
+    <Transaction>2018/10/11 17:48:44.968.dfm,D:\Users\fabio.lindemberg.WPD\Documents\RAD Studio\Projects\mdi-forms-into-a-pkg\packageProject\Unit1.dfm=D:\Users\fabio.lindemberg.WPD\Documents\RAD Studio\Projects\mdi-forms-into-a-pkg\packageProject\UMDIChild.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

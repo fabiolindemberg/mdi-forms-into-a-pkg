@@ -1,0 +1,46 @@
+unit packageMain;
+
+interface
+
+uses
+  Forms;
+
+var
+  OldApplication : TApplication;
+  OldScrean : TScreen;
+
+implementation
+
+procedure AbreForm( Ap : TApplication; Sc : TScreen ); stdcall;
+var
+  Form : TMDIChild;
+begin
+
+  if (OldApplication = nil) and (OldScrean = nil) then begin
+    OldApplication := Application;
+    OldScrean := Screen;
+
+    Application := Ap;
+    Screen := Sc;
+  end;
+
+  Form := TMDIChild.Create(Application);
+  Form.Show;
+
+end;
+
+procedure RetornaTudo; stdcall;
+begin
+  Application := OldApplication;
+  Screen := OldScrean;
+end;
+
+
+Exports
+  AbreForm,
+  RetornaTudo;
+
+begin
+end.
+
+end.

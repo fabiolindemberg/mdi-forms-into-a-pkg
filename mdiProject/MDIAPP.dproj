@@ -1,0 +1,124 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{3743027E-A484-40BE-A0A5-34E6A237A9F7}</ProjectGuid>
+			<MainSource>MDIAPP.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;vclimg;dbrtl;Rave77VCL;bdertl;rtl;vcldb;QR5RunD2010;vclactnband;TeeImage914;adortl;TeeWorld914;TeeLanguage914;TeePro914;TeeGL914;TeeUI914;TeeDB914;Tee914;TeeMaker114;TeeTree2D14Tee9;TsiLang_2010r;madBasic_;madDisAsm_;madExcept_;vcldbx;xmlrtl;dsnap;IndyCore;IndySystem;inet;intrawebdb_100_140;Intraweb_100_140;vclie;webdsnap;inetdbbde;inetdbxpress;dbexpress;DbxCommonDriver;dbxcds;addict4db_d14;addict4_d14;rbRTL1214;rbRCL1214;rbIDE1214;AmilBiometria_D14;wpdBiometria_D14;WPCaptureImagem_D14;ChkLstBxSpecial_D14;AgfaEditPesquisa;DCPdelphi2010;wpdGradient_D14;WPDDesktop_D14;wpWallpaper_D14;WebServiceIntegracao_D14;FormatadorXML;CoolTrayIcon_D2010plus;AgfaWSSigner;dcOutBarPackage_D14;WPDGridDiagnostico_D14;odac140;dac140;cxGridD14;cxPageControlD14;cxExtEditorsD14;cxDataD14;cxEditorsD14;dxGDIPlusD14;dxThemeD14;cxLibraryD14;dxCoreD14;rxctl;VclSmp;rxdb;rxbde;AlphaDB2010;acnt2010_R;rbCIDE1214;rbBDE1214;rbUSERDesign1214;rbUSER1214;rbDIDE1214;rbDAD1214;dclRBBDE1214;rbDBDE1214;rbDB1214;dclRBADO1214;rbADO1214;dclRBDBE1214;rbDBE1214;rbTCUI1214;rbTC1214;vcltouch;dsnapcon;vclib;ibxpress;IndyProtocols;websnap;inetdb;soaprtl;vclribbon;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;Collections;BinderPackage;BindingDataSet;dacvcl140;crcontrols140;odacvcl140;oraprov140;AcquireImage_D14;skype;Abbrevia;cxSchedulerD14;cxSchedulerGridD14;dxmdsD14;dxDockingD14;dxsbD14;dxComnD14;cxVerticalGridD14;exbldrD2K10;exprsd2k10;DrawObjects_D14;GMLib_D2010;dxLayoutControlD14;dxNavBarD14;dxBarDBNavD14;dxBarD14;dxBarExtDBItemsD14;dxBarExtItemsD14;WPDTerceiros_D14;cxBarEditItemD14;D2010_RestApi;EditLazyQueryPkg_D2010;EurekaLogCore;ConsultasDinamicas;SmartFilterPanelPkg_D2010;SimpleFilter_D2010;MdiFormsPkg</DCC_UsePackage>
+			<DCC_F>false</DCC_F>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>..\bin\</DCC_ExeOutput>
+			<DCC_K>false</DCC_K>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_DependencyCheckOutputName>..\bin\MDIAPP.exe</DCC_DependencyCheckOutputName>
+			<DCC_E>false</DCC_E>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_N>true</DCC_N>
+			<DCC_UnitSearchPath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_S>false</DCC_S>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="MDIAPP.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="MAIN.PAS">
+				<Form>MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="CHILDWIN.PAS">
+				<Form>MDIChild</Form>
+			</DCCReference>
+			<DCCReference Include="about.pas">
+				<Form>AboutBox</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">MDIAPP.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="D:\Area de Trabalho\FrameWork\FrameWork_D2010\Biblioteca\DevExpress dx D2010\bpls\dclEQTLD5.bpl">ExpressQuantumTreeList and dxDBGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="D:\Area de Trabalho\FrameWork\FrameWork_D2010\Biblioteca\richviewactions\bin\RichViewActionsD2010.bpl">TRichView: RichViewActions for Delphi 2010</Excluded_Packages>
+						<Excluded_Packages Name="D:\Area de Trabalho\FrameWork\FrameWork_D2010\Biblioteca\delphichromiumembedded\bin\DCEF_2010.bpl">(untitled)</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\samplevisualizers140.bpl">Embarcadero Sample Debugger Visualizers</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
